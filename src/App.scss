@@ -1,0 +1,34 @@
+@import './design-tokens/scss-variables.scss';
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url(../public/assets/fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url(../public/assets/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+:root {
+  --mainBlue: #2ca7df;
+  --mainGreen: #98cf00;
+  --mainWhite: #ffffff;
+  --secondaryWhite: #f2f5fa;
+}
+
+body {
+  font-family: 'Montserrat Medium';
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
