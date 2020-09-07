@@ -1,7 +1,16 @@
+const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const sass = require('sass');
+const dotenv = require('dotenv');
+const env = dotenv.config().parsed;
+
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
 
 module.exports = {
+  entry: ['@babel/polyfill', './src/index.js'],
   module: {
     rules: [
       {
@@ -50,6 +59,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html'
-    })
+    }),
+    new webpack.DefinePlugin(envKeys)
   ]
 };

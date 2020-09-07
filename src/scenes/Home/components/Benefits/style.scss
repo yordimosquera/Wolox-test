@@ -1,0 +1,27 @@
+@import '../../../../design-tokens/scss-variables.scss';
+
+.benefitsTitle {
+  font-family: 'Montserrat Regular', sans-serif;
+  font-size: 2.2em;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  .blue {
+    color: $mainBlue;
+    margin-left: 17px;
+  }
+}
+
+.benefitsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.dividerLine {
+  margin-top: 70px;
+  width: 100%;
+  border-bottom: 1px solid #f2f5fa;
+  box-shadow: 1px 0px 16px 2px #bfc8cc;
+}
