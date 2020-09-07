@@ -10,6 +10,21 @@
   src: url(../public/assets/fonts/Montserrat/Montserrat-Regular.ttf);
 }
 
+@font-face {
+  font-family: 'Montserrat SemiBold';
+  src: url(../public/assets/fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url(../public/assets/fonts/Montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat ExtraBold';
+  src: url(../public/assets/fonts/Montserrat/Montserrat-ExtraBold.ttf);
+}
+
 :root {
   --mainBlue: #2ca7df;
   --mainGreen: #98cf00;

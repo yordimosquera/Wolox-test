@@ -1,0 +1,51 @@
+@import '../../../../design-tokens/scss-variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-size: contain;
+  background-image: url(../../../../../public//assets/backgrounds/Bg_Header@3x.png);
+}
+
+.headerOptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  a {
+    font-family: 'Montserrat SemiBold', sans-serif;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.headerLogo {
+  width: 12em;
+}
+
+.welcomeSection {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.welcomeText {
+  font-family: 'Montserrat Regular', sans-serif;
+  font-size: 2.5em;
+  display: flex;
+  flex-direction: column;
+  .bold {
+    font-family: 'Montserrat SemiBold', sans-serif;
+  }
+  .main {
+    font-family: 'Montserrat Bold', sans-serif;
+    color: $mainGreen;
+  }
+}
+
+.welcomeImage {
+  width: 416px;
+  transform: rotateY(180deg);
+}

@@ -1,0 +1,33 @@
+@import '../../../../design-tokens/scss-variables.scss';
+
+.footerSection {
+  align-items: center;
+  background-image: url(../../../../../public/assets/backgrounds/Bg_Footer@3x.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.footerText {
+  font-family: 'Montserrat Regular', sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2em;
+  .bold {
+    font-family: 'Montserrat Bold', sans-serif;
+  }
+  .boldBlue {
+    font-family: 'Montserrat Bold', sans-serif;
+    color: $mainBlue;
+  }
+  .regular {
+    font-size: 0.8em;
+  }
+}
+
+.logo {
+  margin-top: 60px;
+}

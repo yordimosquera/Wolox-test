@@ -7,8 +7,9 @@ const StyledRequirement = styled.div`
   display: flex;
   flex-direction: row;
   font-family: 'Montserrat Regular', sans-serif;
+  margin-bottom: 30px;
   img {
-    margin-right: 10px;
+    margin-right: 13px;
   }
 `;
 

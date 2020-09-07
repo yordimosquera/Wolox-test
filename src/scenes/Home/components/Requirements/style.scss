@@ -1,0 +1,24 @@
+@import '../../../../design-tokens/scss-variables.scss';
+
+.requirementsSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+}
+
+.requirement {
+  align-self: center;
+  text-align: center;
+  flex: 1;
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 1.7em;
+}
+
+.requirementsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}

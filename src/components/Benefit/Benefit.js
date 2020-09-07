@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledBenefit = styled.div`
-  align-items: center;
+  align-self: baseline;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  font-family: Montserrat Medium;
+  font-family: 'Montserrat Regular', sans-serif;
+  text-align: center;
+  font-size: 1.4em;
   img {
     margin-bottom: 10px;
   }
