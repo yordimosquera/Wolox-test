@@ -6,7 +6,13 @@ export const services = {
       });
       return response.json();
     } catch (error) {
-      console.log(error);
+      return error;
     }
+  },
+  getTechByKeyword: (techs = [], keywords = '') => {
+    const wordToSearch = keywords.toLowerCase();
+    return techs.filter(
+      tech => tech.tech.toLowerCase().indexOf(wordToSearch) >= 0
+    );
   }
 };

@@ -40,7 +40,7 @@ const Card = styled.div`
 `;
 
 const TechCard = ({
-  data: { imageSource, author, license, type, language, year, tech }
+  data: { logo, author, license, type, language, year, tech }
 }) => {
   return (
     <Card>
@@ -49,7 +49,7 @@ const TechCard = ({
         <span>{license}</span>
       </div>
 
-      <img className="two" src={imageSource} />
+      <img className="two" src={logo} />
 
       <div className="three">
         <span>
