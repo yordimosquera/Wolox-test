@@ -1,0 +1,4 @@
+export const LOGIN_SUCCESSFUL = 'LOGIN_SUCCESSFUL';
+export const LOGIN_IN_PROGRESS = 'LOGIN_IN_PROGRESS';
+export const LOGIN_ERROR = 'LOGIN_ERROR';
+export const LOGOUT = 'LOGOUT';

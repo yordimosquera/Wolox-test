@@ -37,12 +37,14 @@ const Button = ({
   text,
   textColor = white,
   backgroundColor = 'transparent',
-  borderColor = blue
+  borderColor = blue,
+  type = null
 }) => (
   <StyledButton
     textColor={textColor}
     backgroundColor={backgroundColor}
     borderColor={borderColor}
+    type={type}
   >
     {text}
   </StyledButton>
@@ -52,7 +54,8 @@ Button.propTypes = {
   text: PropTypes.string.isRequired,
   textColor: PropTypes.string,
   backgroundColor: PropTypes.string,
-  borderColor: PropTypes.string
+  borderColor: PropTypes.string,
+  type: PropTypes.string
 };
 
 export default Button;
