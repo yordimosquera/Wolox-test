@@ -20,7 +20,8 @@ export const fetchTechnologies = async dispatch => {
     });
   } catch (error) {
     dispatch({
-      type: ERROR_FETCH_TECHS
+      type: ERROR_FETCH_TECHS,
+      error
     });
   }
 };

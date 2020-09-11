@@ -17,7 +17,7 @@ const Header = () => (
       <a href="#technologies">{'Tecnologías'}</a>
       <a href="#benefits">{'Beneficios'}</a>
       <a href="#requirements">{'Requerimientos'}</a>
-      <Link to={'/technologies'}>
+      <Link to={'/login'}>
         <Button text={'Ingresar'} textColor={blue} />
       </Link>
     </div>

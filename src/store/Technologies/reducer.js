@@ -25,6 +25,7 @@ export default (state, action) => {
     },
     [ERROR_FETCH_TECHS]: {
       status: REQUEST_STATUSES.NOT_LOADED,
+      error: action.error,
       ...state
     }
   };
