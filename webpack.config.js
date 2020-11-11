@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const sass = require('sass');
 const dotenv = require('dotenv');
 const env = dotenv.config().parsed;
+const path = require('path');
 
 const envKeys = Object.keys(env).reduce((prev, next) => {
   prev[`process.env.${next}`] = JSON.stringify(env[next]);
@@ -10,6 +11,12 @@ const envKeys = Object.keys(env).reduce((prev, next) => {
 }, {});
 
 module.exports = {
+  devServer: {
+    historyApiFallback: true,
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: process.env.REACT_APP_PORT
+  },
   entry: ['@babel/polyfill', './src/index.js'],
   module: {
     rules: [

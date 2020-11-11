@@ -18,12 +18,14 @@ const App = () => (
         <Switch>
           <Route exact path="/" component={Home} />
           <PrivateRoute
+            exact
             path={LOGIN}
             component={TechList}
             defaultComponent={Login}
             redirectPath={TECHS}
           />
           <PrivateRoute
+            exact
             path={TECHS}
             component={TechList}
             defaultComponent={Login}
@@ -36,7 +38,6 @@ const App = () => (
             path="/wolox"
             render={() => (window.location = 'https://www.wolox.com.ar/')}
           />
-          <Route component={Home} />
         </Switch>
       </TechWrapper>
     </AuthWrapper>

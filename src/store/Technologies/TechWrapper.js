@@ -10,12 +10,13 @@ const TechWrapper = ({ children }) => {
   const {
     status = REQUEST_STATUSES.NOT_LOADED,
     techs = [],
+    error,
     currentTechs = []
   } = state;
 
   const getTechs = () => fetchTechnologies(dispatch);
-  const filterTechs = ({ keyword, mode, field }) =>
-    getTechByKeyword({ dispatch, techs, keyword, mode, field });
+  const filterTechs = ({ keyword, mode, field, type }) =>
+    getTechByKeyword({ dispatch, techs, keyword, mode, field, type });
 
   return (
     <context.Provider
@@ -24,7 +25,8 @@ const TechWrapper = ({ children }) => {
         techs,
         getTechs,
         filterTechs,
-        currentTechs
+        currentTechs,
+        error
       }}
     >
       {children}

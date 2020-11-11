@@ -27,8 +27,14 @@
 .welcomeSection {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+}
+
+@media (min-width: 890px) {
+  .welcomeSection {
+    flex-direction: row;
+  }
 }
 
 .welcomeText {

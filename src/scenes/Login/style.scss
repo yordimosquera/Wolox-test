@@ -1,0 +1,23 @@
+@import '../../../src/design-tokens/scss-variables.scss';
+
+.loginWrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  width: 90%;
+  max-width: 30rem;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  background: $mainWhite;
+}
+
+.checkbox {
+  margin-top: 40px;
+  > input {
+    margin-right: 10px;
+  }
+}
