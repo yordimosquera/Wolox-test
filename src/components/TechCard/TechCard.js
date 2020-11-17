@@ -1,41 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { defaultColors } from '../../constants';
+const { white, green } = defaultColors;
 
 const Card = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+  border-radius: 8px;
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  background: ${white};
   font-family: 'Montserrat Regular';
-  border: 1px solid;
-  border-color: gray;
-  border-radius: 1rem;
-  width: 500px;
-  .one {
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 10px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  .title {
+    padding-right: 1rem;
+    text-align: right;
+    color: ${green};
   }
-  .two {
-    grid-column: 3 / 4;
-    grid-row: 1 / 3;
-    max-width: 100%;
+  .desc {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
   }
-  .three {
-    display: flex;
-    justify-content: space-around;
-    grid-column: 1/4;
-    grid-row: 3 / 4;
+  h2 {
+    margin: 0;
+    padding: 0 1rem;
   }
-  .four {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    grid-column: 1/4;
-    grid-row: 4;
+  .image {
+    align-self: center;
+    width: 70%;
+    justify-self: center;
   }
 `;
 
@@ -44,32 +39,14 @@ const TechCard = ({
 }) => {
   return (
     <Card>
-      <div className="one">
-        <span>{tech}</span>
-        <span>{license}</span>
-      </div>
+      <img className="image" src={logo} />
+      <div>
+        <p className="title">{license}</p>
+        <h2>{tech}</h2>
 
-      <img className="two" src={logo} />
-
-      <div className="three">
-        <span>
-          {'Foundation:  '}
-          <strong>{year}</strong>
-        </span>
-        <span>
-          {'Author:  '}
-          <strong>{author}</strong>
-        </span>
-      </div>
-      <div className="four">
-        <span>
-          {'Language:  '}
-          <strong>{language}</strong>
-        </span>
-        <span>
-          {'Type:  '}
-          <strong>{type}</strong>
-        </span>
+        <div className="desc">
+          {`Is a ${type} technology that use ${language}, it was created by ${author} in ${year}.`}
+        </div>
       </div>
     </Card>
   );

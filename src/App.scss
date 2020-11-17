@@ -30,10 +30,20 @@
   --mainGreen: #98cf00;
   --mainWhite: #ffffff;
   --secondaryWhite: #f2f5fa;
+  --lightBlue: #d3e4f8;
 }
 
 body {
   font-family: 'Montserrat Medium';
+}
+
+.screenContainer {
+  background-image: url(../public/assets/backgrounds/Bg_Header@3x.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
 }
 
 .section {

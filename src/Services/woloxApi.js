@@ -24,7 +24,6 @@ export const services = {
           password
         }
       });
-
       return response.json();
     } catch (error) {
       return error;

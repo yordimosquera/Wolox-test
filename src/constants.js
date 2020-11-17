@@ -1,7 +1,8 @@
 export const defaultColors = {
   blue: 'var(--mainBlue)',
   white: 'var(--mainWhite)',
-  green: 'var(--green)'
+  green: 'var(--mainGreen)',
+  lightBlue: 'var(--lightBlue)'
 };
 
 export const REQUEST_STATUSES = {
@@ -40,8 +41,4 @@ export const ROUTES = {
   TECHS: '/technologies'
 };
 
-export const TECH_TYPES = {
-  BACK_END: 'Back-end',
-  FRONT_END: 'Front-end',
-  MOBILE: 'Mobile'
-};
+export const TECH_TYPES = ['Back-End', 'Front-End', 'Mobile'];

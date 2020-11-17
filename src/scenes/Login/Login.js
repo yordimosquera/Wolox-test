@@ -10,6 +10,10 @@ import {
 } from '../../constants';
 import AuthContext from '../../store/Auth/context';
 import { validateLogin } from '../../services/utils';
+import './style.scss';
+import MainLogo from '../../components/MainLogo';
+import woloxLogo from '../../../public/assets/images/logo_full_color.svg';
+import { BiUser } from 'react-icons/bi';
 
 const { OK } = LOGIN_ERRORS;
 const { EMAIL, PASSWORD } = INPUT_TEXT_FIELDS;
@@ -48,19 +52,30 @@ const Login = ({ history }) => {
   };
 
   return (
-    <>
-      <form onSubmit={onSubmit}>
-        <InputText name={EMAIL} handleChange={onChange} />
-        <InputText name={PASSWORD} handleChange={onChange} />
-        <Button type={'submit'} text={'Login'} backgroundColor={blue} />
-        <input
-          type="checkbox"
-          keepAuth={keepAuth}
-          onChange={() => setKeepAuth(!keepAuth)}
+    <div className="screenContainer">
+      <MainLogo logo={woloxLogo} />
+      <form className="loginWrapper" onSubmit={onSubmit}>
+        <InputText name={EMAIL} handleChange={onChange} placeHolder={EMAIL}>
+          <BiUser />
+        </InputText>
+        <InputText
+          name={PASSWORD}
+          handleChange={onChange}
+          placeHolder={PASSWORD}
+          type="password"
         />
+        <Button type={'submit'} text={'Login'} backgroundColor={blue} />
+        <label className="checkbox">
+          <input
+            type="checkbox"
+            keepAuth={keepAuth}
+            onChange={() => setKeepAuth(!keepAuth)}
+          />
+          {'Permanecer conectado'}
+        </label>
       </form>
       {validationError === OK ? null : <p>{validationError}</p>}
-    </>
+    </div>
   );
 };
 

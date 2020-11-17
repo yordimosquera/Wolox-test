@@ -1,0 +1,55 @@
+@import '../../../src/design-tokens/scss-variables.scss';
+
+.filterBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $mainWhite;
+  margin-top: 2rem;
+}
+
+.techWrapper {
+  align-items: center;
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .filterBar {
+    flex-direction: column;
+  }
+  .techWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .techWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filterBar {
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-evenly;
+    width: 50%;
+  }
+}
+
+.modeWrapper {
+  @media (max-width: 899px) {
+    margin: 2rem auto;
+  }
+
+  @media (min-width: 900px) and (max-width: 1399px) {
+    margin-left: 1rem;
+    min-width: 10rem;
+  }
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+  flex-direction: row;
+}
